@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		8E2780232C90ED94007E96FB /* ChatsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2780222C90ED94007E96FB /* ChatsAppApp.swift */; };
-		8E2780252C90ED94007E96FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2780242C90ED94007E96FB /* ContentView.swift */; };
 		8E2780272C90ED97007E96FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2780262C90ED97007E96FB /* Assets.xcassets */; };
 		8E27802A2C90ED97007E96FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2780292C90ED97007E96FB /* Preview Assets.xcassets */; };
+		8E2780352C90EF38007E96FB /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2780342C90EF38007E96FB /* WelcomeView.swift */; };
+		8E2780372C90EF5D007E96FB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2780362C90EF5D007E96FB /* LoginView.swift */; };
+		8E2780392C90EF79007E96FB /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2780382C90EF79007E96FB /* RegisterView.swift */; };
+		8E27803B2C90EF89007E96FB /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E27803A2C90EF89007E96FB /* Validations.swift */; };
+		8E27803E2C90EFA0007E96FB /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E27803D2C90EFA0007E96FB /* WelcomeViewModel.swift */; };
+		8E2780402C90EFA6007E96FB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E27803F2C90EFA6007E96FB /* LoginViewModel.swift */; };
+		8E2780432C90EFB7007E96FB /* SecureFieldWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2780422C90EFB7007E96FB /* SecureFieldWithButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E27801F2C90ED94007E96FB /* ChatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2780222C90ED94007E96FB /* ChatsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsAppApp.swift; sourceTree = "<group>"; };
-		8E2780242C90ED94007E96FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8E2780262C90ED97007E96FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E2780292C90ED97007E96FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8E2780342C90EF38007E96FB /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		8E2780362C90EF5D007E96FB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8E2780382C90EF79007E96FB /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		8E27803A2C90EF89007E96FB /* Validations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
+		8E27803D2C90EFA0007E96FB /* WelcomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		8E27803F2C90EFA6007E96FB /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8E2780422C90EFB7007E96FB /* SecureFieldWithButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureFieldWithButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +63,10 @@
 		8E2780212C90ED94007E96FB /* ChatsApp */ = {
 			isa = PBXGroup;
 			children = (
-				8E2780222C90ED94007E96FB /* ChatsAppApp.swift */,
-				8E2780242C90ED94007E96FB /* ContentView.swift */,
-				8E2780262C90ED97007E96FB /* Assets.xcassets */,
+				8E2780412C90EFAD007E96FB /* Components */,
+				8E27803C2C90EF97007E96FB /* ViewModels */,
+				8E2780332C90EF23007E96FB /* Others */,
+				8E2780302C90EE6F007E96FB /* Views */,
 				8E2780282C90ED97007E96FB /* Preview Content */,
 			);
 			path = ChatsApp;
@@ -65,6 +78,43 @@
 				8E2780292C90ED97007E96FB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8E2780302C90EE6F007E96FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E2780342C90EF38007E96FB /* WelcomeView.swift */,
+				8E2780362C90EF5D007E96FB /* LoginView.swift */,
+				8E2780382C90EF79007E96FB /* RegisterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E2780332C90EF23007E96FB /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				8E2780222C90ED94007E96FB /* ChatsAppApp.swift */,
+				8E2780262C90ED97007E96FB /* Assets.xcassets */,
+				8E27803A2C90EF89007E96FB /* Validations.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		8E27803C2C90EF97007E96FB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8E27803D2C90EFA0007E96FB /* WelcomeViewModel.swift */,
+				8E27803F2C90EFA6007E96FB /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8E2780412C90EFAD007E96FB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8E2780422C90EFB7007E96FB /* SecureFieldWithButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +187,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E2780252C90ED94007E96FB /* ContentView.swift in Sources */,
+				8E2780372C90EF5D007E96FB /* LoginView.swift in Sources */,
+				8E2780432C90EFB7007E96FB /* SecureFieldWithButton.swift in Sources */,
+				8E27803E2C90EFA0007E96FB /* WelcomeViewModel.swift in Sources */,
+				8E2780392C90EF79007E96FB /* RegisterView.swift in Sources */,
 				8E2780232C90ED94007E96FB /* ChatsAppApp.swift in Sources */,
+				8E2780352C90EF38007E96FB /* WelcomeView.swift in Sources */,
+				8E27803B2C90EF89007E96FB /* Validations.swift in Sources */,
+				8E2780402C90EFA6007E96FB /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
