@@ -1,8 +1,8 @@
 //
 //  WelcomeViewModel.swift
-//  ChatApp
+//  ChatsApp
 //
-//  Created by Mustafa Ölmezses on 10.09.2024.
+//  Created by Mustafa Ölmezses on 11.09.2024.
 //
 
 import Foundation
@@ -12,7 +12,7 @@ enum ViewStack{
     case register
 }
 
-class WelcomeViewModel: ObservableObject{
+class WelcomeViewModel: ObservableObject {
     @Published var presentNextView = false
     @Published var newView = ViewStack.login
 }

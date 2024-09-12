@@ -10,8 +10,12 @@ import SwiftUI
 @main
 struct ChatsAppApp: App {
     var body: some Scene {
+        
+        let registerViewModel = RegisterViewModel()
+        
         WindowGroup {
             WelcomeView()
+                .environmentObject(registerViewModel)
         }
     }
 }

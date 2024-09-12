@@ -1,6 +1,6 @@
 //
-//  ContentView.swift
-//  ChatApp
+//  WelcomeView.swift
+//  ChatsApp
 //
 //  Created by Mustafa Ölmezses on 10.09.2024.
 //
@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct WelcomeView: View {
-
-@StateObject var viewModel = WelcomeViewModel()
     
+    @StateObject var viewModel = WelcomeViewModel()
     
     var body: some View {
         NavigationStack{
@@ -35,6 +34,7 @@ struct WelcomeView: View {
                 HStack{
                     Button(action: {
                         viewModel.presentNextView = true
+                        viewModel.newView = .login
                     }, label: {
                         Text("Login")
                             .foregroundStyle(.white)
@@ -44,15 +44,17 @@ struct WelcomeView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                     })
                     .shadow(radius: 6)
-                    
+
                     Button(action: {
                         viewModel.presentNextView = true
+                        viewModel.newView = .register
                     }, label: {
                         Text("Sign Up")
                             .fontWeight(.bold)
                             .frame(width: 160 , height: 60)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                     })
+
                 }
                 .padding(.top , 40)
                 
@@ -60,10 +62,10 @@ struct WelcomeView: View {
                 
             }
             .navigationDestination(isPresented: $viewModel.presentNextView) {
-                if viewModel.newView == .login {
+                if viewModel.newView == .login{
                     LoginView()
                 }else{
-                    RegisterView()
+                    AddNameView()
                 }
             }
         }

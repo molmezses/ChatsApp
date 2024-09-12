@@ -7,18 +7,15 @@
 
 import SwiftUI
 
-enum FocusedField{
-    case email
-    case password
-}
+
 
 struct LoginView: View {
     
-    @State var email = ""
-    @State var password = ""
 
     @FocusState private var focusedField: FocusedField?
-
+    @StateObject var viewModel: LoginViewModel = LoginViewModel()
+    @State var isSecured = true
+    
     var body: some View {
         VStack{
             Text("Login Here")
@@ -27,23 +24,93 @@ struct LoginView: View {
                 .bold()
             Text("Welcome back you've \n been missed")
                 .multilineTextAlignment(.center)
+                .padding(.bottom , 40)
             
             VStack{
-                TextField("Email", text: $email)
+                if !viewModel.isValidEmail() && !viewModel.isEmptyEmail(){
+                    HStack {
+                        Text(viewModel.errorEmailMessage)
+                            .foregroundStyle(.red)
+                        .font(.footnote)
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                }
+                TextField("Email", text: $viewModel.email)
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
                     .focused($focusedField , equals: .email)
                     .padding()
-                    .background(Color("secondaryGreen").opacity(0.05))
+                    .background(Color("secondaryGreen").opacity(0.1))
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .background(
                         RoundedRectangle(cornerRadius: 12)
-                            .stroke(focusedField == .email ? Color("primaryGreen") : Color("focused") , lineWidth: 3)
+                            .stroke(!viewModel.isValidEmail() && !viewModel.isEmptyEmail() ? .red.opacity(0.6)  : focusedField == .email ? Color("primaryGreen") : Color("focused") , lineWidth: 3)
                     )
                     .padding(.horizontal)
                     .padding(.bottom)
+
                 
-                SecureFieldWithButton(title: "Password", text: $password)
+                if !viewModel.isValidPassword() && !viewModel.isEmptyPassword(){
+                    HStack {
+                        Text(viewModel.errorPasswordMessage)
+                            .foregroundStyle(.red)
+                        .font(.footnote)
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                }
+                
+                VStack{
+                    ZStack{
+                        if isSecured{
+                            VStack{
+                                SecureField("Password", text: $viewModel.password)
+                                    .textInputAutocapitalization(.never)
+                                    .autocorrectionDisabled()
+                                    .padding()
+                                    .background(Color("secondaryGreen").opacity(0.1))
+                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 12)
+                                            .stroke(!viewModel.isValidPassword() && !viewModel.isEmptyPassword() ? .red.opacity(0.6)  : focusedField == .password ? Color("primaryGreen") : Color("focused") , lineWidth: 3)
+                                    )
+                                    .padding(.horizontal)
+                                    .padding(.bottom)
+                                    .focused($focusedField , equals: .password)
+                            }
+                        }else{
+                            VStack{
+                                TextField("Password", text: $viewModel.password)
+                                    .textInputAutocapitalization(.never)
+                                    .autocorrectionDisabled()
+                                    .padding()
+                                    .background(Color("secondaryGreen").opacity(0.1))
+                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 12)
+                                            .stroke(!viewModel.isValidPassword() && !viewModel.isEmptyPassword() ? .red.opacity(0.6)  : focusedField == .password ? Color("primaryGreen") : Color("focused") , lineWidth: 3)
+                                    )
+                                    .padding(.horizontal)
+                                    .padding(.bottom)
+                                    .focused($focusedField , equals: .password)
+                            }
+                        }
+                        HStack{
+                            Spacer()
+                            Button(action: {
+                                isSecured.toggle()
+                            }, label: {
+                                Image(systemName: isSecured ? "eye.slash" : "eye")
+                                    .imageScale(.large)
+                                    .foregroundStyle(.gray)
+                                    .padding(.bottom)
+                            })
+                        }
+                        .padding(.trailing , 36)
+                        
+                    }
+                }
   
                 
                 HStack{
@@ -54,7 +121,10 @@ struct LoginView: View {
                 }
                 .padding(.horizontal)
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    print("Mustafa \(viewModel.password) ")
+                    viewModel.alertMessage()
+                }, label: {
                     Text("Login")
                         .font(.headline)
                         .foregroundStyle(.white)
@@ -74,7 +144,7 @@ struct LoginView: View {
                     .foregroundStyle(Color("primaryGreen"))
                 
                 HStack{
-                    Button(action: {}, label: {
+                    Button(action: {print("Mustafa \(viewModel.password) ")}, label: {
                         Image("google-logo")
                     })
                     .iconButtonStyle
@@ -90,8 +160,15 @@ struct LoginView: View {
                 .padding(.vertical)
             }
         }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text("Error"), message: Text(viewModel.errorMessage), dismissButton: .default(Text("Ok")))
+        }
     }
+    
+  
 }
+
+
 
 extension View{
     var iconButtonStyle: some View{
@@ -100,6 +177,10 @@ extension View{
             .background(Color("secondaryGray"))
             .clipShape(RoundedRectangle(cornerRadius: 8))
     }
+}
+
+#Preview {
+    AddNameView()
 }
 
 

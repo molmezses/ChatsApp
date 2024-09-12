@@ -7,30 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E0C76812C91B0FD00A4355F /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C76802C91B0FD00A4355F /* WelcomeViewModel.swift */; };
+		8E0C76852C9229BF00A4355F /* AddNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C76842C9229BF00A4355F /* AddNameView.swift */; };
+		8E0C76872C922B6E00A4355F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C76862C922B6E00A4355F /* RegisterViewModel.swift */; };
+		8E0C76892C9232B200A4355F /* AddEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C76882C9232B200A4355F /* AddEmailView.swift */; };
+		8E0C768B2C92338000A4355F /* AddPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C768A2C92338000A4355F /* AddPasswordView.swift */; };
+		8E0C768D2C923AC400A4355F /* ComplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C768C2C923AC400A4355F /* ComplateView.swift */; };
 		8E2780232C90ED94007E96FB /* ChatsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2780222C90ED94007E96FB /* ChatsAppApp.swift */; };
 		8E2780272C90ED97007E96FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2780262C90ED97007E96FB /* Assets.xcassets */; };
 		8E27802A2C90ED97007E96FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2780292C90ED97007E96FB /* Preview Assets.xcassets */; };
 		8E2780352C90EF38007E96FB /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2780342C90EF38007E96FB /* WelcomeView.swift */; };
 		8E2780372C90EF5D007E96FB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2780362C90EF5D007E96FB /* LoginView.swift */; };
-		8E2780392C90EF79007E96FB /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2780382C90EF79007E96FB /* RegisterView.swift */; };
 		8E27803B2C90EF89007E96FB /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E27803A2C90EF89007E96FB /* Validations.swift */; };
-		8E27803E2C90EFA0007E96FB /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E27803D2C90EFA0007E96FB /* WelcomeViewModel.swift */; };
 		8E2780402C90EFA6007E96FB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E27803F2C90EFA6007E96FB /* LoginViewModel.swift */; };
-		8E2780432C90EFB7007E96FB /* SecureFieldWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2780422C90EFB7007E96FB /* SecureFieldWithButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E0C76802C91B0FD00A4355F /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		8E0C76842C9229BF00A4355F /* AddNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameView.swift; sourceTree = "<group>"; };
+		8E0C76862C922B6E00A4355F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		8E0C76882C9232B200A4355F /* AddEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailView.swift; sourceTree = "<group>"; };
+		8E0C768A2C92338000A4355F /* AddPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordView.swift; sourceTree = "<group>"; };
+		8E0C768C2C923AC400A4355F /* ComplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplateView.swift; sourceTree = "<group>"; };
 		8E27801F2C90ED94007E96FB /* ChatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2780222C90ED94007E96FB /* ChatsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsAppApp.swift; sourceTree = "<group>"; };
 		8E2780262C90ED97007E96FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E2780292C90ED97007E96FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E2780342C90EF38007E96FB /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		8E2780362C90EF5D007E96FB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		8E2780382C90EF79007E96FB /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		8E27803A2C90EF89007E96FB /* Validations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
-		8E27803D2C90EFA0007E96FB /* WelcomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		8E27803F2C90EFA6007E96FB /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		8E2780422C90EFB7007E96FB /* SecureFieldWithButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureFieldWithButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +71,8 @@
 			children = (
 				8E2780412C90EFAD007E96FB /* Components */,
 				8E27803C2C90EF97007E96FB /* ViewModels */,
-				8E2780332C90EF23007E96FB /* Others */,
 				8E2780302C90EE6F007E96FB /* Views */,
+				8E2780332C90EF23007E96FB /* Others */,
 				8E2780282C90ED97007E96FB /* Preview Content */,
 			);
 			path = ChatsApp;
@@ -85,7 +91,10 @@
 			children = (
 				8E2780342C90EF38007E96FB /* WelcomeView.swift */,
 				8E2780362C90EF5D007E96FB /* LoginView.swift */,
-				8E2780382C90EF79007E96FB /* RegisterView.swift */,
+				8E0C76842C9229BF00A4355F /* AddNameView.swift */,
+				8E0C76882C9232B200A4355F /* AddEmailView.swift */,
+				8E0C768A2C92338000A4355F /* AddPasswordView.swift */,
+				8E0C768C2C923AC400A4355F /* ComplateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,8 +112,9 @@
 		8E27803C2C90EF97007E96FB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				8E27803D2C90EFA0007E96FB /* WelcomeViewModel.swift */,
 				8E27803F2C90EFA6007E96FB /* LoginViewModel.swift */,
+				8E0C76802C91B0FD00A4355F /* WelcomeViewModel.swift */,
+				8E0C76862C922B6E00A4355F /* RegisterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -112,7 +122,6 @@
 		8E2780412C90EFAD007E96FB /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				8E2780422C90EFB7007E96FB /* SecureFieldWithButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -188,11 +197,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E2780372C90EF5D007E96FB /* LoginView.swift in Sources */,
-				8E2780432C90EFB7007E96FB /* SecureFieldWithButton.swift in Sources */,
-				8E27803E2C90EFA0007E96FB /* WelcomeViewModel.swift in Sources */,
-				8E2780392C90EF79007E96FB /* RegisterView.swift in Sources */,
+				8E0C76852C9229BF00A4355F /* AddNameView.swift in Sources */,
+				8E0C768D2C923AC400A4355F /* ComplateView.swift in Sources */,
+				8E0C76812C91B0FD00A4355F /* WelcomeViewModel.swift in Sources */,
+				8E0C76872C922B6E00A4355F /* RegisterViewModel.swift in Sources */,
 				8E2780232C90ED94007E96FB /* ChatsAppApp.swift in Sources */,
+				8E0C768B2C92338000A4355F /* AddPasswordView.swift in Sources */,
 				8E2780352C90EF38007E96FB /* WelcomeView.swift in Sources */,
+				8E0C76892C9232B200A4355F /* AddEmailView.swift in Sources */,
 				8E27803B2C90EF89007E96FB /* Validations.swift in Sources */,
 				8E2780402C90EFA6007E96FB /* LoginViewModel.swift in Sources */,
 			);
