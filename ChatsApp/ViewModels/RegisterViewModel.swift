@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class RegisterViewModel: ObservableObject{
     @Published var name = ""
@@ -80,6 +83,26 @@ class RegisterViewModel: ObservableObject{
             return true
         }
         return false
+    }
+    
+    func register(){
+        Auth.auth().createUser(withEmail: email, password: password) { result , error in
+            guard let userId = result?.user.uid else {return}
+            if error == nil{
+                print("BASARİLİ")
+            }
+            else{
+                print("HATA")
+            }
+            //Insert metodu çağırılacak
+            self.insertUserData(id: userId)
+        }
+    }
+    
+    func insertUserData(id : String) {
+        let newUser = Users(id: id, firstName: name, LastName: surName, userEmail: email, password: password)
+        let db = Firestore.firestore()
+        db.collection("Users").document(id).setData(newUser.asDictonary())
     }
     
 }

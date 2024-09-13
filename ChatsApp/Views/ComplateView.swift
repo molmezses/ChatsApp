@@ -27,20 +27,16 @@ struct ComplateView: View {
             Text("You are now ready, you can now \n log in to the application.")
                 .multilineTextAlignment(.center)
                 .padding(.bottom , 40)
-            HStack{
-                Text("\(viewModel.name)")
-                Text("\(viewModel.surName)")
-                Text("\(viewModel.email)")
-                Text("\(viewModel.password)")
-            }
-            .font(.footnote)
+
 
             
             VStack{
                 Button {
-                    
+                    Task{
+                        viewModel.register()
+                    }
                 } label: {
-                    Text("Add Something 🥳")
+                    Text("Complate 🥳")
                         .foregroundStyle(.white)
                         .font(.headline)
                         .frame(height: 55)
