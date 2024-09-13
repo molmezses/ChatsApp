@@ -179,9 +179,7 @@ extension View{
     }
 }
 
-#Preview {
-    AddNameView()
-}
+
 
 
 #Preview {
