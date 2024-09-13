@@ -24,7 +24,7 @@ struct AddPasswordView: View {
                     .font(.title)
                     .foregroundStyle(Color("primaryGreen"))
                     .bold()
-                Text("You need to create a password to ensure your security")
+                Text("You need to create a password \n to ensure your security")
                     .multilineTextAlignment(.center)
                     .padding(.bottom , 40)
                 

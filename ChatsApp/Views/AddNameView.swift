@@ -73,32 +73,7 @@ struct AddNameView: View {
                 .shadow(radius: 8)
                 .disabled(viewModel.isDisableNameSurname())
                 .opacity(viewModel.isDisableNameSurname() ? 0.5 : 1)
-
-                
-//                
-//                Button(action: {
-//                    viewModel.showAlert = viewModel.isEmptyName()
-//                    viewModel.showAlert = viewModel.isEmptySurName()
-//                
-//                    if !viewModel.showAlert{
-//                        print(" mustafa\(viewModel.name)")
-//                        print(" 2 \(viewModel.surName)")
-//                        viewModel.presentNextView = true
-//                    }
-//                }, label: {
-//                    Text("Next")
-//                        .font(.headline)
-//                        .foregroundStyle(.white)
-//                        .padding(.vertical)
-//                        .frame(maxWidth: .infinity)
-//                        .background(Color("primaryGreen"))
-//                        .clipShape(RoundedRectangle(cornerRadius: 12))
-//                        .padding(.horizontal)
-//                })
-//                .padding(.vertical)
-//                .shadow(radius: 8)
-                
-                
+         
                 Spacer()
             }
             .alert(isPresented: $viewModel.showAlert) {

@@ -24,24 +24,33 @@ struct ComplateView: View {
                 .font(.title)
                 .foregroundStyle(Color("primaryGreen"))
                 .bold()
-            Text("You are now ready, you can now log in to the application.")
+            Text("You are now ready, you can now \n log in to the application.")
                 .multilineTextAlignment(.center)
                 .padding(.bottom , 40)
+            HStack{
+                Text("\(viewModel.name)")
+                Text("\(viewModel.surName)")
+                Text("\(viewModel.email)")
+                Text("\(viewModel.password)")
+            }
+            .font(.footnote)
+
             
             VStack{
                 Button {
-                    viewModel.getget()
+                    
                 } label: {
-                    Text("COMPLATE 🥳")
+                    Text("Add Something 🥳")
                         .foregroundStyle(.white)
                         .font(.headline)
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
-                        .background(animate ? Color("primaryGreen") : Color("darkGray"))
+                        .background(animate ? Color("primaryGreen") : Color("buttonGray"))
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
-                .padding(.horizontal , animate ? 30 : 50)
-                .shadow(color: animate ? Color("primaryGreen").opacity(0.7) : Color("darkGray").opacity(0.7),
+                .padding(.horizontal)
+                .padding(.horizontal , animate ? 20 : 40)
+                .shadow(color: animate ? Color("primaryGreen").opacity(0.7) : Color("buttonGray").opacity(0.7),
                         radius: animate ? 30 : 10,
                         x: 0,
                         y: animate ? 50 : 30)

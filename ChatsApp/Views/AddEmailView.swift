@@ -25,7 +25,7 @@ struct AddEmailView: View {
                     .font(.title)
                     .foregroundStyle(Color("primaryGreen"))
                     .bold()
-                Text("You need to define an email address for your account.")
+                Text("You need to define an \n email address for your account.")
                     .multilineTextAlignment(.center)
                     .padding(.bottom , 40)
                 
